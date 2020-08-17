@@ -1,0 +1,21 @@
+<div class='box'>
+  <div class='header'>
+    <h2 class='title'>{{day}}</h2>
+    <img (click)='manageDropdown()' class="add-button" src='https://image.flaticon.com/icons/svg/149/149145.svg'>
+  </div>
+
+  <div class='body'>    
+    <ul>
+      <li *ngFor='let task of tasks' (click)='manageTask(task)'>
+        {{task}}
+      </li>
+      <div *ngIf='isTaskOpen' class='task-dropdown'>
+        <p>Edit</p>
+        <p>Change day</p>
+        <p (click)='markAsDone()'>Mark as done</p>
+        <p (click)='deleteTask()'>Delete</p>
+      </div>
+    </ul>
+    <input *ngIf='isDropdownOpen' type="text" placeholder="Write here" [(ngModel)]="newTask" (keyup.enter)="addTask(newTask)"/>
+  </div>
+</div>

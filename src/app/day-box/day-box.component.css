@@ -1,0 +1,65 @@
+.box {
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 7px 0;
+}
+
+.header {
+  background-color: var(--my-pink);
+  height: 40px;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+}
+
+.title {
+  font-family: 'Patrick Hand SC', cursive;
+  align-self: center;
+  padding-bottom: 5px;
+}
+
+.add-button {
+  width: 22px;
+  height: 22px;
+  align-self: center;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 90%;
+  margin: 3px 4% 15px 4%;
+}
+
+li {
+  cursor: pointer;
+  margin: 4px 0;
+}
+
+li:hover {
+  font-style: italic;
+}
+
+.task-dropdown {
+  position: absolute;
+  left: 210px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.task-dropdown p {
+  display: block;
+  margin: 0;
+  padding: 10px 16px 10px 16px;
+  cursor: pointer;
+}
+
+.task-dropdown p:hover {
+  background-color: #f1f1f1
+}

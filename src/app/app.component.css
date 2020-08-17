@@ -1,0 +1,114 @@
+h1, h2 {
+  font-family: 'Patrick Hand SC', cursive;
+  text-align: center;
+}
+
+.navigation-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.planner-header {
+  text-align: center;
+  background-color: var(--my-pink);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin-bottom: 10px;
+}
+
+.planner-header p {
+  margin-top: 0;
+}
+
+.planner-body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.week-container {
+  display: flex;
+  flex-direction: column;
+  width: 49vw;
+  padding: 1vh 0.5vw;
+  box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+}
+
+.week-header {
+  background-color: var(--my-pink);
+}
+
+.week-body {
+  display: flex;
+}
+
+.week-column {
+  width: 28vw;
+  padding: 12px 1vw;
+}
+
+.week-notepad {
+  width: 68vw;
+  padding: 0 1vw;
+}
+
+.day-container {
+  display: flex;
+  flex-direction: column;
+  width: 49vw;
+  padding: 1vh 0.5vw;
+  box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+}
+.day-header {
+  background-color: var(--my-pink);
+}
+
+.day-body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.day-notepad {
+  width: 49vw;
+  padding: 0 0.5vw;
+}
+
+.day-journal {
+  width: 49vw;
+  padding: 0 0.5vw;
+}
+
+.day-journal-daytime {
+  background-color: var(--my-yellow);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.day-journal-daytime img {
+  position: absolute;
+  right: 1.5vw;
+  max-width: 25px;
+  padding: 5px;
+  z-index: 1;
+}
+
+.day-journal-nighttime {
+  background-color: var(--my-blue);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+
+.day-journal-nighttime img {
+  position: absolute;
+  right: 1.5vw;
+  max-width: 23px;
+  padding: 5px;
+  z-index: 1;
+}

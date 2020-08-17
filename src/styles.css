@@ -1,0 +1,14 @@
+/* Add application styles & imports to this file! */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin:0;
+}
+
+:root {
+  --my-pink:#FFD7E6;
+  --my-blue: #D5F9FF;
+  --my-yellow: #FFF9DB;
+}

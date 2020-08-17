@@ -1,0 +1,8 @@
+<h3>{{title}}</h3>
+<p>{{subtitle}}</p>
+<ul>
+  <li *ngFor='let i of [].constructor(numberOfInputs)'>
+    <task-input></task-input>
+  </li>
+</ul>
+<img *ngIf='canAddTask' (click)='addTask()' src='https://image.flaticon.com/icons/svg/2089/2089588.svg'>
