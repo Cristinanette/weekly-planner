@@ -2,60 +2,11 @@
 
 <div class='navigation-bar'>
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">About</a></li>
+    <li><a [routerLink]= "['/home']">Home</a></li>
+    <li><a [routerLink]= "['/planner']">Weekly planner</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">About me</a></li>
   </ul>
 </div>
 
-<div class='planner-header'>
-  <h1>weekly & daily planner</h1>
-  <p>
-    Use this tool to get most out of your week and stay on top of your tasks!
-  </p>
-</div>
-
-
-<div class='planner-body'>
-  <div class='week-container'>
-    <div class='week-header'>
-      <h2>WEEK {{today | date: 'w of y' | uppercase}}</h2>
-    </div>
-    <div class='week-body'>
-      <div class='week-column'>
-        <app-day-box *ngFor='let day of weekDays' [day]='day'></app-day-box>
-      </div>
-      <div class='week-notepad'>
-        <h2>Tasks for the week</h2>
-        <task-category *ngFor='let category of weekTasksCategories' [title]='category.title' [subtitle]='category.subtitle' [numberOfInputs]='category.numberOfInputs' [canAddTask]='category.canAddTask'></task-category>
-      </div>
-    </div>
-  </div>
-
-  <div class='day-container'>
-    <div class='day-header'>
-      <h2>{{today | date: 'EEEE d MMMM' | uppercase}}</h2>
-    </div>
-    <div class='day-body'>
-      <div class='day-notepad'>
-        <h2>Tasks for the day</h2>
-        <task-category *ngFor='let category of dayTasksCategories' [title]='category.title' [subtitle]='category.subtitle' [numberOfInputs]='category.numberOfInputs' [canAddTask]='category.canAddTask'></task-category>
-      </div>
-      <div class='day-journal'>
-        <h2>Journal entry for the day</h2>
-        <div class='day-journal-daytime'>
-          <img src='https://image.flaticon.com/icons/svg/606/606795.svg'/>
-          <journal-category *ngFor='let category of journalCategoriesDayTime' [title]='category' [numberOfInputs]=3></journal-category>
-        </div>
-        <div class='day-journal-nighttime'>
-          <img src='https://image.flaticon.com/icons/svg/606/606807.svg'/>
-          <journal-category *ngFor='let category of journalCategoriesNightTime' [title]='category.title' [numberOfInputs]="category.numberOfInputs"></journal-category>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class='planner-footer'></div>
+<router-outlet></router-outlet>
